@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 //prototypes
 void clearTempWord(char *word);
@@ -10,7 +11,7 @@ int main(int argc, char *argv[])
 {
 if (argc != 4 && argc != 5)
   {
-    printf("Correct format is: ./spellingBee [mandatory character] [6 other characters] [dictionary file] [min word length - optional]");
+    printf("Correct format is: ./spellingBee [mandatory character] [3+ other characters, no space or comma] [dictionary file] [min word length - optional]");
     return 1;
   }
   
@@ -19,12 +20,22 @@ if (argc != 4 && argc != 5)
     printf("First arg needs to be one character");
     return 2;    
   }
-  
-  if (strlen(argv[2]) != 6)
+  //check that argv[1] is alpha
+  else if (isalpha((int) argv[1]) != 0)
   {
-    printf("Give 6 other characters with no spaces in between");   
+    printf("First arg needs to be a letter");
+  }
+  
+  if (strlen(argv[2]) < 3)
+  {
+    printf("Please give at least 3 additional characters with no spaces between them");   
     return 3;
   }
+  //check that argv[2] is all alpha chars
+// else if (isalpha(argv[2]) != 0)
+// {
+//   printf("Please only give letters that should be used.");
+// }
   
   char *dictFile = argv[3];
   FILE *inptr = fopen(dictFile, "r");
