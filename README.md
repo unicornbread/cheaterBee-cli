@@ -10,6 +10,7 @@ While the Spelling Bee consists of a single required letter and an additional 6 
 
 
 ## How To Run
+### Passing in arguments when running the program
 Running the program requires 3 arguments, plus an optional 4th argument: 
 1. Single letter required in word
 2. Other characters that are allowed to be used in words - entered as a single string of characters. Minimum of 3, max of 25 (which would return all words in your dictionary file)
@@ -18,10 +19,18 @@ Running the program requires 3 arguments, plus an optional 4th argument:
 The order of arguments are as follows:
 [required char] [additional chars] [dictionary file name] [optional minimum word length]
 
+### Prompted User Input
+If 3 or 4 arguments are not included when running the program, the program will take the liberty of prompting the user for the necessary inputs. Please note that if the user is being uncooperative and fails to provide correct input the program will be just as stubborn and continue asking until correct input is given (i.e., infintite loops are only escapable with correct input)
+
 **Limitations**
 - Assumes longest possible word is 45 characters (pneumonoultramicroscopicsilicovolcanoconiosis)
 - Results will only be as good as the dictionary file used
 - Assumes words in dictionary file are separated by either comma, new line or space
 
-**Dictionary File**
-Dictionary file was made by creating a copy of the system dictionary (cat /usr/share/dict/words > dictionary.txt)
+## Additional Information
+
+### Dictionary File**
+Dict ionary file was made by creating a copy of the system dictionary (cat /usr/share/dict/words > dictionary.txt)
+
+### Bee Mascot 
+This is a picture of a piece of artwork I bought at a coffee shop as a reward for passing calculus many, many years ago. It seems to fit well with this program because it looks like how I feel when I need to reach out to this program to find the last word (or words) of the Spelling Bee. 
