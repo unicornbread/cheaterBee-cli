@@ -21,3 +21,6 @@ The order of arguments are as follows:
 - Assumes longest possible word is 45 characters (pneumonoultramicroscopicsilicovolcanoconiosis)
 - Results will only be as good as the dictionary file used
 - Assumes words in dictionary file are separated by either comma, new line or space
+
+**Dictionary File**
+Dictionary file was made by creating a copy of the system dictionary (cat /usr/share/dict/words > dictionary.txt)
