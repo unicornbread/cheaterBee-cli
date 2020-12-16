@@ -24,13 +24,13 @@ If 3 or 4 arguments are not included when running the program, the program will 
 
 ## Additional Information
 
-### Limitations**
+### Limitations
 - Assumes longest possible word is 45 characters (pneumonoultramicroscopicsilicovolcanoconiosis)
 - Results will only be as good as the dictionary file used
 - Assumes words in dictionary file are separated by either comma, new line or space
 
-### Dictionary File**
-Dict ionary file was made by creating a copy of the system dictionary (cat /usr/share/dict/words > dictionary.txt)
+### Dictionary File
+Dictionary file was made by creating a copy of the system dictionary (cat /usr/share/dict/words > dictionary.txt)
 
 ### Bee Mascot 
 This is a picture of a piece of artwork I bought at a coffee shop as a reward for passing calculus many, many years ago. It seems to fit well with this program because it looks like how I feel when I need to reach out to this program to find the last word (or words) of the Spelling Bee. 
