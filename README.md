@@ -20,14 +20,14 @@ The order of arguments are as follows:
 [required char] [additional chars] [dictionary file name] [optional minimum word length]
 
 ### Prompted User Input
-If 3 or 4 arguments are not included when running the program, the program will take the liberty of prompting the user for the necessary inputs. Please note that if the user is being uncooperative and fails to provide correct input the program will be just as stubborn and continue asking until correct input is given (i.e., infintite loops are only escapable with correct input)
+If 3 or 4 arguments are not included when running the program, the program will take the liberty of prompting the user for the necessary inputs. Please note that if the user is being uncooperative and fails to provide correct input the program will be just as stubborn and continue asking until correct input is given (i.e., loops are only escapable with correct input)
 
-**Limitations**
+## Additional Information
+
+### Limitations**
 - Assumes longest possible word is 45 characters (pneumonoultramicroscopicsilicovolcanoconiosis)
 - Results will only be as good as the dictionary file used
 - Assumes words in dictionary file are separated by either comma, new line or space
-
-## Additional Information
 
 ### Dictionary File**
 Dict ionary file was made by creating a copy of the system dictionary (cat /usr/share/dict/words > dictionary.txt)
