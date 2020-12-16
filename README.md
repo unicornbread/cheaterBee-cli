@@ -1,4 +1,5 @@
 # cheaterBee
+![Picture of deranged bee painting](https://github.com/ejamison3/cheaterBee/blob/main/mascot.jpg?raw=true)
 ## About
 Cheater Bee can be used to "solve" the New York Times 'Spelling Bee' daily puzzle [here](https://www.nytimes.com/puzzles/spelling-bee). This puzzle involves finding all words made up of a given subset of letters. Here are the additional rules:
 1. Each word must contain the indicated required character at least (but not limited to) once
