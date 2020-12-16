@@ -19,9 +19,34 @@ int main(int argc, char *argv[]){
   if (argc != 4 && argc != 5){
       //printf("Correct format is: ./spellingBee [mandatory character] [3+ other characters, no space or comma] [dictionary file] [optional - min word length]\n");
       //return 1;
-      printf("You have not entered necessary arguments when running the code. For your convenience, we will collect them now");
-      printf("What is the required letter? [only enter one letter]");
-      //scanf("%s",&)
+      printf("You have not entered necessary arguments when running the code. For your convenience, we will collect them now\n");
+      
+      //get required character
+      while ((strlen(reqChar) != 1) || (isalpha((int) reqChar[0]) == 0)){
+        printf("What is the required letter? [only enter one letter]\n");
+        scanf("%s",reqChar);
+      }
+
+      //get other possible chars
+      while ((strlen(otherChars) < 3 || strlen(otherChars) > 25) && (isalpha((int) otherChars) == 0)){
+        printf("Enter all other possible letter. No comma, no spaces.\n");
+        scanf("%s",otherChars);
+      }
+
+      //get dictionary file name
+      while (strlen(dictFile) < 1 || strlen(dictFile) > 99){
+        printf("Enter the name of the dictionary file to use.\n");
+        scanf("%s",dictFile);
+      }
+      
+      //get minimum word length
+      printf("Enter the minimum word length that should be returned. (if all words should be returned, enter 1)\n");
+      scanf("%i",&minWordLen);
+      while (isdigit(minWordLen) == 0 && minWordLen < 1){
+        printf("Enter the minimum word length that should be returned. (if all words should be returned, enter 1)\n");
+        scanf("%i",&minWordLen);
+      }
+      
   }else{
     //concatenate all error messages to prevent user frustration
     char *errMsg = (char *) malloc(sizeof(char)*150);
@@ -118,6 +143,8 @@ int main(int argc, char *argv[]){
         minWordLen = (int) argv[4];
       }
     }
+    free(errMsg);
+    free(tempErrMsg);
   }  
   
   //open dictionary
