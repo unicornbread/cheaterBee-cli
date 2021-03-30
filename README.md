@@ -15,6 +15,7 @@ Running the program requires 3 arguments, plus an optional 4th argument:
 1. Single letter required in word
 2. Other characters that are allowed to be used in words - entered as a single string of characters. Minimum of 3, max of 25 (which would return all words in your dictionary file)
 3. Dictionary file name - feel free to use the txt file here or provide your own
+4. (optional) Minimum length of word(s) returned
 
 The order of arguments are as follows:
 [required char] [additional chars] [dictionary file name] [optional minimum word length]
